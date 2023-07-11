@@ -4,17 +4,6 @@ import torch.nn.functional as F
 from einops import rearrange
 from typing import Iterable, List
 
-INCHANNELS = 3
-WIDTHS = [32, 64, 128, 256]
-DEPTHS = [3, 4, 6, 3]
-NUM_HEADS = [1, 2, 4, 8]
-PATCH_SIZES = [7, 3, 3, 3]
-OVERLAP_SIZES = [4, 2, 2, 2]
-REDUCTION_RATIOS = [8, 4, 2, 1]
-EXPANSION_FACTORS = [4, 4, 4, 4]
-DECODER_CHANNELS = 128
-SCALE_FACTORS = [8, 4, 2, 1]
-
 class LayerNorm2d(nn.LayerNorm):
     def forward(self, x):
         x = rearrange(x, "b c h w -> b h w c")
