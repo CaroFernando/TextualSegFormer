@@ -20,3 +20,20 @@ class TrainParams:
     EPOCHS = 20
     BATCH_SIZE = 16
     PLOT_EVERY = 100
+    TEMPLATES = [
+        "A photo of a {}.",
+        "A photo of a small {}.",
+        "A photo of a medium {}.",
+        "A photo of a large {}.",
+        "This is a photo of a {}.",
+        "This is a photo of a small {}.",
+        "This is a photo of a medium {}.",
+        "This is a photo of a large {}.",
+        "A {} in the scene.",
+        "A photo of a {} in the scene.",
+        "There is a {} in the scene.",
+        "There is the {} in the scene.",
+        "This is a {} in the scene.",
+        "This is the {} in the scene.",
+        "This is one {} in the scene."
+    ]
