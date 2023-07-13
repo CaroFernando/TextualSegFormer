@@ -1,0 +1,42 @@
+image,mask,captions,label,supercategory,category_id,mask_num
+000000289343.jpg,000000289343_0.jpg,A man is riding a large bike through the park.,dog,animal,18,4
+000000289343.jpg,000000289343_1.jpg,A man is riding a large bike through the park.,person,person,1,4
+000000289343.jpg,000000289343_2.jpg,A man is riding a large bike through the park.,bench,outdoor,15,4
+000000289343.jpg,000000289343_3.jpg,A man is riding a large bike through the park.,bicycle,vehicle,2,4
+000000061471.jpg,000000061471_4.jpg,Puppy chewing on toilet paper in the bathroom. ,dog,animal,18,3
+000000061471.jpg,000000061471_5.jpg,Puppy chewing on toilet paper in the bathroom. ,bottle,kitchen,44,3
+000000061471.jpg,000000061471_6.jpg,Puppy chewing on toilet paper in the bathroom. ,toilet,furniture,70,3
+000000472375.jpg,000000472375_7.jpg,A small black and brown dog sitting next to a motorcycle.,dog,animal,18,4
+000000472375.jpg,000000472375_8.jpg,A small black and brown dog sitting next to a motorcycle.,motorcycle,vehicle,4,4
+000000472375.jpg,000000472375_9.jpg,A small black and brown dog sitting next to a motorcycle.,cup,kitchen,47,4
+000000520301.jpg,000000520301_10.jpg,A brown dog hanging it's head out of a car window.,dog,animal,18,1
+000000520301.jpg,000000520301_10.jpg,A brown dog is looking outside of the car window.,dog,animal,18,1
+000000520301.jpg,000000520301_10.jpg,A brown medium sized dog stares out of a window.,dog,animal,18,1
+000000520301.jpg,000000520301_10.jpg,"An open-mouthed, leashed dog has its head outside of an unlocked car door window as a blurry park-like vista rushes by.",dog,animal,18,1
+000000520301.jpg,000000520301_10.jpg,A dog looking out the window of a car.,dog,animal,18,1
+000000579321.jpg,000000579321_11.jpg,The person walking the dog has dressed it in a torn shirt.,dog,animal,18,2
+000000579321.jpg,000000579321_12.jpg,The person walking the dog has dressed it in a torn shirt.,person,person,1,2
+000000494869.jpg,000000494869_13.jpg,A woman standing at a kitchen counter with a child and a dog is behind her.,dog,animal,18,9
+000000494869.jpg,000000494869_14.jpg,A woman standing at a kitchen counter with a child and a dog is behind her.,person,person,1,9
+000000494869.jpg,000000494869_15.jpg,A woman standing at a kitchen counter with a child and a dog is behind her.,spoon,kitchen,50,9
+000000494869.jpg,000000494869_16.jpg,A woman standing at a kitchen counter with a child and a dog is behind her.,bowl,kitchen,51,9
+000000494869.jpg,000000494869_17.jpg,A woman standing at a kitchen counter with a child and a dog is behind her.,bottle,kitchen,44,9
+000000554002.jpg,000000554002_18.jpg,A black dog standing between people in line,dog,animal,18,14
+000000554002.jpg,000000554002_19.jpg,A black dog standing between people in line,person,person,1,14
+000000554002.jpg,000000554002_20.jpg,A black dog standing between people in line,handbag,accessory,31,14
+000000554002.jpg,000000554002_21.jpg,A black dog standing between people in line,chair,furniture,62,14
+000000078823.jpg,000000078823_22.jpg,A dog standing on the back of a brown car.,dog,animal,18,5
+000000078823.jpg,000000078823_23.jpg,A dog standing on the back of a brown car.,potted plant,furniture,64,5
+000000078823.jpg,000000078823_24.jpg,A dog standing on the back of a brown car.,car,vehicle,3,5
+000000419974.jpg,000000419974_25.jpg,a man standing next to a kitchen counter preparing food.,dog,animal,18,25
+000000419974.jpg,000000419974_26.jpg,a man standing next to a kitchen counter preparing food.,bottle,kitchen,44,25
+000000419974.jpg,000000419974_27.jpg,a man standing next to a kitchen counter preparing food.,chair,furniture,62,25
+000000419974.jpg,000000419974_28.jpg,a man standing next to a kitchen counter preparing food.,dining table,furniture,67,25
+000000419974.jpg,000000419974_29.jpg,a man standing next to a kitchen counter preparing food.,person,person,1,25
+000000419974.jpg,000000419974_30.jpg,a man standing next to a kitchen counter preparing food.,potted plant,furniture,64,25
+000000419974.jpg,000000419974_31.jpg,a man standing next to a kitchen counter preparing food.,fork,kitchen,48,25
+000000419974.jpg,000000419974_32.jpg,a man standing next to a kitchen counter preparing food.,knife,kitchen,49,25
+000000419974.jpg,000000419974_33.jpg,a man standing next to a kitchen counter preparing food.,bench,outdoor,15,25
+000000419974.jpg,000000419974_34.jpg,a man standing next to a kitchen counter preparing food.,wine glass,kitchen,46,25
+000000419974.jpg,000000419974_35.jpg,a man standing next to a kitchen counter preparing food.,cup,kitchen,47,25
+000000419974.jpg,000000419974_36.jpg,a man standing next to a kitchen counter preparing food.,oven,appliance,79,25

@@ -1,0 +1,32 @@
+image,mask,captions,label,supercategory,category_id,mask_num
+000000558840.jpg,000000558840_0.jpg,"Tray of food disguised in car, on restaurant counter",hot dog,food,58,11
+000000558840.jpg,000000558840_1.jpg,"Tray of food disguised in car, on restaurant counter",bottle,kitchen,44,11
+000000558840.jpg,000000558840_2.jpg,"Tray of food disguised in car, on restaurant counter",cup,kitchen,47,11
+000000558840.jpg,000000558840_3.jpg,"Tray of food disguised in car, on restaurant counter",person,person,1,11
+000000558840.jpg,000000558840_4.jpg,"Tray of food disguised in car, on restaurant counter",spoon,kitchen,50,11
+000000558840.jpg,000000558840_5.jpg,"Tray of food disguised in car, on restaurant counter",dining table,furniture,67,11
+000000200365.jpg,000000200365_6.jpg,A plate with two hot dogs and a cup of coke on a table next to a bike.,hot dog,food,58,9
+000000200365.jpg,000000200365_7.jpg,A plate with two hot dogs and a cup of coke on a table next to a bike.,dining table,furniture,67,9
+000000200365.jpg,000000200365_8.jpg,A plate with two hot dogs and a cup of coke on a table next to a bike.,bicycle,vehicle,2,9
+000000200365.jpg,000000200365_9.jpg,A plate with two hot dogs and a cup of coke on a table next to a bike.,car,vehicle,3,9
+000000200365.jpg,000000200365_10.jpg,A plate with two hot dogs and a cup of coke on a table next to a bike.,cup,kitchen,47,9
+000000495357.jpg,000000495357_11.jpg,A dog sitting on top of a motorcycle in an intersection.,dog,animal,18,19
+000000495357.jpg,000000495357_12.jpg,A dog sitting on top of a motorcycle in an intersection.,motorcycle,vehicle,4,19
+000000495357.jpg,000000495357_13.jpg,A dog sitting on top of a motorcycle in an intersection.,handbag,accessory,31,19
+000000495357.jpg,000000495357_14.jpg,A dog sitting on top of a motorcycle in an intersection.,person,person,1,19
+000000116061.jpg,000000116061_15.jpg,"Several people who are riding motor scooters, stopped at an intersection.",dog,animal,18,22
+000000116061.jpg,000000116061_16.jpg,"Several people who are riding motor scooters, stopped at an intersection.",car,vehicle,3,22
+000000116061.jpg,000000116061_17.jpg,"Several people who are riding motor scooters, stopped at an intersection.",motorcycle,vehicle,4,22
+000000116061.jpg,000000116061_18.jpg,"Several people who are riding motor scooters, stopped at an intersection.",bus,vehicle,6,22
+000000116061.jpg,000000116061_19.jpg,"Several people who are riding motor scooters, stopped at an intersection.",person,person,1,22
+000000116061.jpg,000000116061_20.jpg,"Several people who are riding motor scooters, stopped at an intersection.",handbag,accessory,31,22
+000000116061.jpg,000000116061_21.jpg,"Several people who are riding motor scooters, stopped at an intersection.",bottle,kitchen,44,22
+000000016164.jpg,000000016164_22.jpg,A dog is laying on a dirty bathroom floor.,dog,animal,18,2
+000000016164.jpg,000000016164_23.jpg,A dog is laying on a dirty bathroom floor.,toilet,furniture,70,2
+000000205350.jpg,000000205350_24.jpg,A bathroom with marble walls and counters surround a large mirror.,dog,animal,18,4
+000000205350.jpg,000000205350_25.jpg,A bathroom with marble walls and counters surround a large mirror.,sink,appliance,81,4
+000000000074.jpg,000000000074_26.jpg,A picture of a dog laying on the ground.,dog,animal,18,8
+000000000074.jpg,000000000074_27.jpg,A picture of a dog laying on the ground.,bicycle,vehicle,2,8
+000000000074.jpg,000000000074_28.jpg,A picture of a dog laying on the ground.,person,person,1,8
+000000212545.jpg,000000212545_29.jpg,a girl wearing a cowboy hat while holding a dog ,dog,animal,18,3
+000000212545.jpg,000000212545_30.jpg,a girl wearing a cowboy hat while holding a dog ,person,person,1,3
