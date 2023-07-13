@@ -11,8 +11,8 @@ class ModelParams:
     SCALE_FACTORS = [8, 4, 2, 1]
 
 class LossParams:
-    ALPHA = 1
-    BETA = 1
+    ALPHA = 0.5
+    BETA = 0.5
     GAMMA = 2
     THRESHOLD = 0.5
 
@@ -20,6 +20,7 @@ class TrainParams:
     EPOCHS = 20
     BATCH_SIZE = 16
     PLOT_EVERY = 100
+    NUM_WORKERS = 4
     TEMPLATES = [
         "A photo of a {}.",
         "A photo of a small {}.",
