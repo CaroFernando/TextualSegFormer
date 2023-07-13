@@ -250,7 +250,8 @@ class ConditionedSegFormer(nn.Module):
         xs = self.encoder(x, pe, condition)
         xs = self.decoder(xs[::-1])
         out = self.head(xs)
-        return torch.sigmoid(out)
+        # return torch.sigmoid(out)
+        return out
 
 
 
