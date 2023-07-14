@@ -11,12 +11,14 @@ class FocalLoss(nn.Module):
 
     def forward(self, inputs, targets):
         #flatten label and prediction tensors
-        inputs = inputs.view(-1)
-        targets = targets.view(-1)
+
+        # inputs = inputs.view(-1)
+        # targets = targets.view(-1)
         
         #first compute binary cross-entropy 
         BCE = F.binary_cross_entropy_with_logits(inputs, targets, reduction='mean')
         # BCE = F.binary_cross_entropy(inputs, targets, reduction='mean')
+        
         BCE_EXP = torch.exp(-BCE)
         focal_loss = self.alpha * (1-BCE_EXP)**self.gamma * BCE
                        
@@ -27,7 +29,8 @@ class DiceLoss(nn.Module):
     def __init__(self):
         super(DiceLoss, self).__init__()
 
-    def forward(self, inputs, targets, smooth=1):    
+    def forward(self, inputs, targets, smooth=1):   
+        inputs = torch.sigmoid(inputs) 
         inputs = inputs.view(-1)
         targets = targets.view(-1)
         
