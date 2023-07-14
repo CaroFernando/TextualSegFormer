@@ -18,7 +18,7 @@ class LossParams:
 
 class TrainParams:
     EPOCHS = 20
-    BATCH_SIZE = 16
+    BATCH_SIZE = 64
     PLOT_EVERY = 100
     NUM_WORKERS = 4
     TRAIN_VAL_SPLIT = 0.8
@@ -39,6 +39,6 @@ class TrainParams:
         "This is the {} in the scene.",
         "This is one {} in the scene."
     ]
-    UNSEEN_CLASSES = [
-        
-    ]
+    UNSEEN_CLASSES = ['horse', 'bear', 'umbrella', 'shoe', 'snowboard', 'bowl', 'keyboard', 
+                      'teddy bear', 'branch', 'door-stuff', 'mirror-stuff', 'mud', 'napkin', 
+                      'sky-other', 'solid-other']
