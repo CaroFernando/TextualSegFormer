@@ -15,7 +15,7 @@ class ZeroShotDataset(Dataset):
             mask_folder,
             mask_size,
             templates, 
-            unseen_clases, 
+            unseen_classes, 
             image_processor, 
             tokenizer, 
             filter_unseen = True,
@@ -25,7 +25,7 @@ class ZeroShotDataset(Dataset):
         self.image_folder = image_folder
         self.mask_folder = mask_folder
         self.templates = templates
-        self.unseen_clases = unseen_clases
+        self.unseen_classes = unseen_classes
         
         self.image_processor = image_processor
         self.tokenizer = tokenizer
@@ -39,11 +39,11 @@ class ZeroShotDataset(Dataset):
 
         if self.filter_unseen:
             # keep only classes that are in the unseen classes list
-            self.df = self.df[self.df["label"].isin(self.unseen_clases)]
+            self.df = self.df[self.df["label"].isin(self.unseen_classes)]
 
         elif self.filter_seen:
             # keep only classes that are not in the unseen classes list
-            self.df = self.df[~self.df["label"].isin(self.unseen_clases)]
+            self.df = self.df[~self.df["label"].isin(self.unseen_classes)]
         
     def __len__(self):
         return len(self.df)

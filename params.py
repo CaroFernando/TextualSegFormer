@@ -39,3 +39,6 @@ class TrainParams:
         "This is the {} in the scene.",
         "This is one {} in the scene."
     ]
+    UNSEEN_CLASSES = [
+        
+    ]
