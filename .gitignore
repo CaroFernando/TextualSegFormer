@@ -154,5 +154,6 @@ cython_debug/
 **/Dataset/
 # **.zip
 **/ProcessedDataset/
+**/ProcessedDatasetStuff/
 **/ZIP/
 **/lightning_logs/
