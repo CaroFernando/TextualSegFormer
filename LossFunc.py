@@ -58,6 +58,8 @@ class IoULoss(nn.Module):
     def forward(self, inputs, targets, smooth=1):
         # inputs are logits with values betwen 0 and 1
 
+        inputs = torch.sigmoid(inputs)
+
         inputs = inputs.view(-1)
         targets = targets.view(-1)
 

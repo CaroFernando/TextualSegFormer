@@ -21,6 +21,7 @@ class TrainParams:
     BATCH_SIZE = 16
     PLOT_EVERY = 100
     NUM_WORKERS = 4
+    TRAIN_VAL_SPLIT = 0.8
     TEMPLATES = [
         "A photo of a {}.",
         "A photo of a small {}.",
