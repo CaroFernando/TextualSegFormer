@@ -157,3 +157,4 @@ cython_debug/
 **/ProcessedDatasetStuff/
 **/ZIP/
 **/lightning_logs/
+*.ckpt
