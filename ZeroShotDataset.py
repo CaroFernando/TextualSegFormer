@@ -13,6 +13,7 @@ class ZeroShotDataset(Dataset):
             df, 
             image_folder,
             mask_folder,
+            image_size,
             mask_size,
             templates, 
             unseen_classes, 
@@ -31,6 +32,15 @@ class ZeroShotDataset(Dataset):
         self.tokenizer = tokenizer
         self.filter_unseen = filter_unseen
         self.filter_seen = filter_seen
+
+        self.image_transform = torchvision.transforms.Compose([
+            torchvision.transforms.Resize((image_size, image_size)),
+            torchvision.transforms.ToTensor(),
+            # torchvision.transforms.Normalize(
+            #     mean=[0.485, 0.456, 0.406], 
+            #     std=[0.229, 0.224, 0.225]
+            # )
+        ])
 
         self.mask_transform = torchvision.transforms.Compose([
             torchvision.transforms.Resize((mask_size, mask_size)),
@@ -57,7 +67,8 @@ class ZeroShotDataset(Dataset):
         image = Image.open(image_path).convert("RGB")
         mask = Image.open(mask_path).convert("L")
 
-        image = self.image_processor(images = image, return_tensors="pt")['pixel_values'][0]
+        s_image = self.image_transform(image)
+        clip_image = self.image_processor(images = image, return_tensors="pt")['pixel_values'][0]
         mask = self.mask_transform(mask)
 
         label = row["label"]
@@ -66,12 +77,13 @@ class ZeroShotDataset(Dataset):
         text = self.tokenizer.encode(text)
         text = torch.Tensor(text).long()
 
-        return image, text, mask
+        return s_image, clip_image, text, mask
     
     def collate_fn(self, batch):
-        images, texts, masks = zip(*batch)
-        images = torch.stack(images)
+        s_images, clip_images, texts, masks = zip(*batch)
+        s_images = torch.stack(s_images)
+        clip_images = torch.stack(clip_images)
+        texts = pad_sequence(texts, batch_first=True)
         masks = torch.stack(masks)
-        texts = pad_sequence(texts, batch_first=True, padding_value=self.tokenizer.pad_token_id)
 
-        return images, texts.long(), masks
+        return s_images, clip_images, texts, masks

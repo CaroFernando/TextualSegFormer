@@ -18,7 +18,7 @@ class LossParams:
 
 class TrainParams:
     EPOCHS = 20
-    BATCH_SIZE = 64
+    BATCH_SIZE = 16
     PLOT_EVERY = 100
     NUM_WORKERS = 4
     TRAIN_VAL_SPLIT = 0.8
