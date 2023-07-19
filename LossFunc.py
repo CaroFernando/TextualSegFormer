@@ -35,7 +35,7 @@ class DiceLoss(nn.Module):
         targets = targets.view(-1)
         
         intersection = (inputs * targets).sum()                            
-        dice = (2.*intersection + smooth)/(inputs.sum() + targets.sum() + smooth)  
+        dice = (2.*intersection + smooth)/(inputs.sum() + targets.sum() + smooth + 1e-9)  
         
         return 1 - dice
     
@@ -74,6 +74,12 @@ class IoULoss(nn.Module):
 
             return IoU
 
+class H_IoULoss(nn.Module):
+    def __init__(self):
+        super(H_IoULoss, self).__init__()
+
+    def forward(self, miou_seen, miou_unseen):
+        return (2 * miou_seen * miou_unseen) / (miou_seen + miou_unseen + 1e-9)
 
 
     

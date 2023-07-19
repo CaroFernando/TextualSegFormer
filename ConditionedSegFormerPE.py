@@ -69,7 +69,7 @@ class OverlapPatchMerging(nn.Sequential):
     def __init__(self, in_channels, out_channels, patch_size, overlap_size):
         super().__init__(
             nn.Conv2d(in_channels, out_channels, kernel_size = patch_size, stride = overlap_size, padding = patch_size // 2, bias = False),
-            # LayerNorm2d(out_channels)
+            LayerNorm2d(out_channels)
         )
 
 

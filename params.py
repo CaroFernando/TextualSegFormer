@@ -17,10 +17,19 @@ class LossParams:
     THRESHOLD = 0.5
 
 class TrainParams:
-    EPOCHS = 20
-    BATCH_SIZE = 16
+    DATASET_IMAGE_FOLDER = 'ProcessedDatasetStuff512/images/'
+    DATASET_IMAGE_FOLDER_TRAIN = 'ProcessedDatasetStuff512/images/train/'
+    DATASET_MASK_FOLDER_TRAIN = 'ProcessedDatasetStuff512/masks/train/'
+    DATASET_IMAGE_FOLDER_VAL = 'ProcessedDatasetStuff512/images/val/'
+    DATASET_MASK_FOLDER_VAL = 'ProcessedDatasetStuff512/masks/val/'
+    TRAIN_CSV_PATH = 'ProcessedDatasetStuff512/csv/train.csv'
+    IMAGE_DIM = 512
+    IMAGE_SIZE = (512, 512)
+    MASK_SIZE = 512//4
+    EPOCHS = 10
+    BATCH_SIZE = 8
     PLOT_EVERY = 100
-    NUM_WORKERS = 4
+    NUM_WORKERS = 1
     TRAIN_VAL_SPLIT = 0.8
     TEMPLATES = [
         "A photo of a {}.",

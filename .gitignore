@@ -152,9 +152,9 @@ cython_debug/
 #.idea/
 
 **/Dataset/
-# **.zip
 **/ProcessedDataset/
 **/ProcessedDatasetStuff/
+**/ProcessedDatasetStuff512/
 **/ZIP/
 **/lightning_logs/
 *.ckpt

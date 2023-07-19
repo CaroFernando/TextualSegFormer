@@ -36,10 +36,12 @@ class ZeroShotDataset(Dataset):
         self.image_transform = torchvision.transforms.Compose([
             torchvision.transforms.Resize((image_size, image_size)),
             torchvision.transforms.ToTensor(),
-            # torchvision.transforms.Normalize(
-            #     mean=[0.485, 0.456, 0.406], 
-            #     std=[0.229, 0.224, 0.225]
-            # )
+            # Calculated mean and std
+            # [0.46955295 0.44641594 0.4071987 ] [0.23915376 0.23444681 0.23751133]
+            torchvision.transforms.Normalize(   
+                mean=[0.46955295, 0.44641594, 0.4071987 ],
+                std=[0.23915376, 0.23444681, 0.23751133]
+            )
         ])
 
         self.mask_transform = torchvision.transforms.Compose([

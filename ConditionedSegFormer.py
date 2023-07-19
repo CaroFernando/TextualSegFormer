@@ -14,11 +14,9 @@ class LayerNorm2d(nn.LayerNorm):
 class EfficentMultiHeadAttention(nn.Module):
     def __init__(self, channels, reduction_ratio, num_heads):
         super().__init__()
-
         self.reduction = nn.Sequential(
             nn.Conv2d(channels, channels, kernel_size = reduction_ratio, stride = reduction_ratio),
         )
-
         self.att = nn.MultiheadAttention(channels, num_heads = num_heads, batch_first = True)
         self.batch_norm = nn.BatchNorm2d(channels)
 
