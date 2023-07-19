@@ -11,8 +11,8 @@ class ModelParams:
     SCALE_FACTORS = [8, 4, 2, 1]
 
 class LossParams:
-    ALPHA = 1
-    BETA = 1
+    ALPHA = 0.5
+    BETA = 0.5
     GAMMA = 2
     THRESHOLD = 0.5
 
@@ -20,6 +20,8 @@ class TrainParams:
     EPOCHS = 20
     BATCH_SIZE = 16
     PLOT_EVERY = 100
+    NUM_WORKERS = 4
+    TRAIN_VAL_SPLIT = 0.8
     TEMPLATES = [
         "A photo of a {}.",
         "A photo of a small {}.",
@@ -37,3 +39,6 @@ class TrainParams:
         "This is the {} in the scene.",
         "This is one {} in the scene."
     ]
+    UNSEEN_CLASSES = ['horse', 'bear', 'umbrella', 'shoe', 'snowboard', 'bowl', 'keyboard', 
+                      'teddy bear', 'branch', 'door-stuff', 'mirror-stuff', 'mud', 'napkin', 
+                      'sky-other', 'solid-other']
