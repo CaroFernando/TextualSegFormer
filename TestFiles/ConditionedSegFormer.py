@@ -19,6 +19,7 @@ class EfficentMultiHeadAttention(nn.Module):
         )
         self.att = nn.MultiheadAttention(channels, num_heads = num_heads, batch_first = True)
         self.batch_norm = nn.BatchNorm2d(channels)
+        # self.layer_norm = nn.LayerNorm2d(channels)
 
     def forward(self, x):
         _, _, h, w = x.shape

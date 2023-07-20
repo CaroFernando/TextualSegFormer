@@ -121,8 +121,8 @@ class CLIPConditionedSegFormer(pl.LightningModule):
     def configure_optimizers(self):
         # optimizer = torch.optim.Adam(self.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-7)
         # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=2000, gamma=0.99)
-        optimizer = torch.optim.Adam(self.parameters(), lr=0.1, betas=(0.9, 0.98), eps=1e-7)
-        warmup_steps = 1000
+        optimizer = torch.optim.Adam(self.parameters(), lr=OptimParams.LR, betas=OptimParams.BETAS, eps=1e-7)
+        warmup_steps = OptimParams.WARMUP_STEPS
         scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda step: self.calc_lr(step, 512, warmup_steps))
         return {
             "optimizer": optimizer, 

@@ -37,7 +37,7 @@ class ZeroShotDataset(Dataset):
             torchvision.transforms.Resize((image_size, image_size)),
             torchvision.transforms.ToTensor(),
             # Calculated mean and std
-            # [0.46955295 0.44641594 0.4071987 ] [0.23915376 0.23444681 0.23751133]
+            # [0.46955295 0.44641594 0.4071987 ] y [0.23915376 0.23444681 0.23751133]
             torchvision.transforms.Normalize(   
                 mean=[0.46955295, 0.44641594, 0.4071987 ],
                 std=[0.23915376, 0.23444681, 0.23751133]
