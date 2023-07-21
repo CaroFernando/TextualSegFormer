@@ -1,13 +1,13 @@
 import pandas as pd
 
-def balance_dataset(train_df):
+def balance_dataset(train_df, ratio=2):
     label_freqs = train_df["label"].value_counts()
     min_freq = label_freqs.min()
     max_freq = label_freqs.max()
     print(min_freq, max_freq)
     balanced_train_df = pd.DataFrame(columns=train_df.columns)
     for label in train_df["label"].unique():
-        freq = int(max_freq * 2 * (min_freq / max_freq))
+        freq = int(max_freq * ratio * (min_freq / max_freq))
         freq = min(freq, label_freqs[label])
         freq = max(freq, min_freq)
         balanced_train_df = balanced_train_df.append(train_df[train_df["label"] == label].sample(freq), ignore_index=True)

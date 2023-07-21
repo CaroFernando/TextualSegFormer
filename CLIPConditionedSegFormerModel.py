@@ -48,6 +48,7 @@ class CLIPConditionedSegFormer(pl.LightningModule):
         return out
     
     def training_step(self, batch, batch_idx):
+        torch.cuda.empty_cache()
         x, x_c, condition, y = batch
         y_hat = self(x, x_c, condition)
         loss = self.neloss(y_hat, y)
@@ -78,6 +79,7 @@ class CLIPConditionedSegFormer(pl.LightningModule):
         return loss
     
     def validation_step(self, batch, batch_idx):
+        torch.cuda.empty_cache()
         x, x_c, condition, y = batch
         y_hat = self(x, x_c, condition)
         loss = self.neloss(y_hat, y)
@@ -99,6 +101,7 @@ class CLIPConditionedSegFormer(pl.LightningModule):
         return loss
     
     def test_step(self, batch, batch_idx):
+        torch.cuda.empty_cache()
         x, x_c, condition, y = batch
         y_hat = self(x, x_c, condition)
 
