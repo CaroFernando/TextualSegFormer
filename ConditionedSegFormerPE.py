@@ -14,13 +14,12 @@ class LayerNorm2d(nn.LayerNorm):
 class VisualEmbeddingsMixer(nn.Module):
     def __init__(self, channels, patch_emb_dim, num_heads):
         super().__init__()
-
         self.patch_embeddings_fcn = nn.Sequential(
             nn.Linear(patch_emb_dim, channels)
         )
-
         self.att = nn.MultiheadAttention(channels, num_heads = num_heads, batch_first = True)
-        self.batch_norm = nn.BatchNorm2d(channels)
+        # self.batch_norm = nn.BatchNorm2d(channels)
+        self.batch_norm = LayerNorm2d(channels)
 
     def forward(self, x, patch_embeddings):
         _, _, h, w = x.shape
@@ -35,7 +34,8 @@ class TextEmbeddingsMixer(nn.Module):
         super().__init__()
         self.condition_emb = nn.Linear(embedding_dim, channels)
         self.att = nn.MultiheadAttention(channels, num_heads = num_heads, batch_first = True)
-        self.batch_norm = nn.BatchNorm2d(channels)
+        # self.batch_norm = nn.BatchNorm2d(channels)
+        self.batch_norm = LayerNorm2d(channels)
 
     def forward(self, x, condition):
         _, _, h, w = x.shape
@@ -69,9 +69,8 @@ class OverlapPatchMerging(nn.Sequential):
     def __init__(self, in_channels, out_channels, patch_size, overlap_size):
         super().__init__(
             nn.Conv2d(in_channels, out_channels, kernel_size = patch_size, stride = overlap_size, padding = patch_size // 2, bias = False),
-            # LayerNorm2d(out_channels)
+            LayerNorm2d(out_channels)
         )
-
 
 class SegFormerConditionedEncoderBlock(nn.Module):
     def __init__(self, channels, condition_dim, patch_embedding_dim, num_heads, expansion):
